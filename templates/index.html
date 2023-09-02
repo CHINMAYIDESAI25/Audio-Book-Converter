@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Audio Book Converter</title>
+        <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style.css')}}">
+    </head>
+    <body>
+        <h1>CONVERT YOUR PDF OR WORD FILE TO AN AUDIOBOOK</h1>
+        <form action="/" method="post" enctype="multipart/form-data">
+            <input type="file" name="uploaded_file" accept=".pdf, .docx" required>
+            <br>
+            <label for="voice">Select voice:</label>
+            <input type="radio" name="voice" value="male" checked>Male
+            <input type="radio" name="voice" value="female" checked>Female
+            <br>
+            <label for="speed">Select speed:</label>
+            <input type="range" name="speed" min="50" max="200" value="100" step="10">
+            <br>
+            <button type="submit">OK</button>
+        </form>
+    </body>
+</html>
